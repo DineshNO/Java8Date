@@ -23,5 +23,9 @@ public class LocalDateCheck {
         System.out.println(date.getDayOfWeek());
         System.out.println(date.getDayOfYear());
 
+
+        LocalDate parseDate = LocalDate.parse("2014-03-18");
+        System.out.println(parseDate);
+
     }
 }
