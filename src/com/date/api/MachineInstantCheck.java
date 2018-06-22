@@ -1,6 +1,8 @@
 package com.date.api;
 
 import java.time.Instant;
+import java.time.temporal.ChronoField;
+import java.time.temporal.UnsupportedTemporalTypeException;
 
 /**
  * Created by Dinesh on 6/22/2018.
@@ -20,5 +22,10 @@ public class MachineInstantCheck {
         System.out.println(Instant.MAX);
         System.out.println(Instant.MIN);
         System.out.println(Instant.EPOCH);
+        try {
+            int day = Instant.now().get(ChronoField.NANO_OF_SECOND);
+        }catch (UnsupportedTemporalTypeException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
